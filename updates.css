@@ -1,0 +1,51 @@
+/* Reset some default styles */
+body, h1, ul, li {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif; /* Set the default font family */
+}
+
+header {
+    background-color: #f2f2f2; /* Set the background color for the header */
+    padding: 2vw; /* Use viewport width units for padding, to make it dynamic and responsive */
+    display: flex; /* Use flexbox for the header */
+    justify-content: space-between; /* Distribute the header content evenly */
+    align-items: center; /* Vertically center the header content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove the default bullet points */
+    display: flex; /* Use flexbox for the navigation menu */
+}
+
+nav li {
+    margin-left: 2vw; /* Use viewport width units for margin, to make it dynamic and responsive */
+}
+
+nav a {
+    text-decoration: none; /* Remove the default underline for links */
+    color: #333; /* Set the link color to a dark gray */
+}
+
+.link-container {
+    display: flex; /* Use flexbox for the link container */
+    flex-wrap: wrap; /* Allow links to wrap to the next line */
+    justify-content: center; /* Center the links horizontally */
+    margin-top: 2vh; /* Use viewport height units for margin, to make it dynamic and responsive */
+}
+
+.link-box {
+    background-color: #f2f2f2; /* Set the background color for the link boxes */
+    padding: 1vw 2vw; /* Use viewport width units for padding (horizontal and vertical), to make it dynamic and responsive */
+    margin: 1vw; /* Use viewport width units for margin, to make it dynamic and responsive */
+    text-align: center; /* Center the text within the link boxes */
+}
+
+.link-box a {
+    text-decoration: none; /* Remove the default underline for links */
+    color: #333; /* Set the link color to a dark gray */
+}

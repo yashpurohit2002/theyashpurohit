@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="updates.css">
+    <style>
+        /* Reset some default styles */
+        body, h1, ul, li {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif; /* Set the default font family */
+            background-color: #f2f2f2; /* Set the background color */
+            color: #333; /* Set the text color */
+        }
+
+        header {
+            background-color: #f2f2f2; /* Set the background color for the header */
+            padding: 2vw; /* Use viewport width units for padding, to make it dynamic and responsive */
+            display: flex; /* Use flexbox for the header */
+            justify-content: space-between; /* Distribute the header content evenly */
+            align-items: center; /* Vertically center the header content */
+        }
+
+        nav ul {
+            list-style-type: none; /* Remove the default bullet points */
+            display: flex; /* Use flexbox for the navigation menu */
+        }
+
+        nav li {
+            margin-left: 2vw; /* Use viewport width units for margin, to make it dynamic and responsive */
+        }
+
+        nav a {
+            text-decoration: none; /* Remove the default underline for links */
+            color: #333; /* Set the link color to a dark gray */
+        }
+
+        /* Coming Soon Styles */
+        .coming-soon {
+            height: 80vh; /* Set the height to 80% of the viewport height */
+            display: flex; /* Use flexbox for the coming soon section */
+            flex-direction: column; /* Arrange the child elements in a column */
+            justify-content: center; /* Center the child elements vertically */
+            align-items: center; /* Center the child elements horizontally */
+            text-align: center; /* Center the text content */
+        }
+
+        .coming-soon h1 {
+            font-size: 4rem; /* Set a larger font size for the heading */
+            font-weight: bold; /* Make the heading bold */
+            text-transform: uppercase; /* Convert the heading to uppercase */
+            letter-spacing: 0.2rem; /* Add some letter spacing for a classy look */
+            color: #555; /* Set a muted color for the heading */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow for depth */
+            margin-bottom: 1rem; /* Add some bottom margin for spacing */
+        }
+
+        .coming-soon p {
+            font-size: 1.5rem; /* Set a slightly smaller font size for the paragraph */
+            color: #777; /* Set a muted color for the paragraph */
+            margin-bottom: 2rem; /* Add some bottom margin for spacing */
+        }
+
+        .coming-soon .countdown {
+            display: flex; /* Use flexbox for the countdown section */
+            justify-content: center; /* Center the countdown elements horizontally */
+            align-items: center; /* Center the countdown elements vertically */
+            font-size: 2rem; /* Set a larger font size for the countdown */
+            color: #555; /* Set a muted color for the countdown */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow for depth */
+        }
+
+        .coming-soon .countdown div {
+            margin: 0 1rem; /* Add some spacing between the countdown elements */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YASH PUROHIT</h1> <!-- Header with the name -->
+        <nav>
+            <ul>
+                <li><a href="Home.html">HOME</a></li>
+                <li><a href="#">WRITING</a></li>
+                <li><a href="#">POETRY</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">RESUME</a></li>
+                <li><a href="#">LET'S CHAT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="link-container">
+            <div class="link-box">
+                <a href="https://yashpurohit.substack.com/">SIGN UP TO MY SUBSTACK</a>
+            </div>
+            <div class="link-box">
+                <a href="https://www.linkedin.com/in/yashpurohit/">LINKEDIN</a>
+            </div>
+            <div class="link-box">
+                <a href="https://x.com/Yash__Purohit">TWITTER</a>
+            </div>
+            <div class="link-box">
+                <a href="https://www.instagram.com/yash_purohit_">INSTAGRAM</a>
+            </div>
+            <div class="link-box">
+                <a href="Coffee.html">COFFEE</a>
+            </div>
+            <div class="link-box">
+                <a href="readingList.html">READING LIST</a>
+            </div>
+            <div class="link-box">
+                <a href="updates.html">UPDATES</a>
+            </div>
+            <div class="link-box">
+                <a href="mailto:yash.purohit1at@gmail.com">YASH.PUROHIT1AT@GMAIL.COM</a>
+            </div>
+        </div>
+    </main>
+
+    <div class="coming-soon">
+        <h1>Coming Soon</h1>
+        <p>Our website is under construction. Stay tuned for an exciting launch!</p>
+        <div class="countdown">
+            <div>
+                <span id="days">00</span>
+                <span>Days</span>
+            </div>
+            <div>
+                <span id="hours">00</span>
+                <span>Hours</span>
+            </div>
+            <div>
+                <span id="minutes">00</span>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <span id="seconds">00</span>
+                <span>Seconds</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set the launch date to the end of 2024
+        const launchDate = new Date('December 31, 2024 23:59:59').getTime();
+
+        // Update the countdown every second
+        const countdown = setInterval(function() {
+            // Get the current date and time
+            const now = new Date().getTime();
+
+            // Calculate the remaining time
+            const distance = launchDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Update the countdown display
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+
+            // If the countdown is finished, stop the interval
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.querySelector('.countdown').innerHTML = 'Launched!';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
