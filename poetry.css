@@ -1,0 +1,308 @@
+/* Reset some default styles */
+body, h1, ul, li {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif; /* Set the default font family */
+}
+
+header {
+    background-color: #f2f2f2; /* Set the background color for the header */
+    padding: 2vw; /* Use viewport width units for padding, to make it dynamic and responsive */
+    display: flex; /* Use flexbox for the header */
+    justify-content: space-between; /* Distribute the header content evenly */
+    align-items: center; /* Vertically center the header content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove the default bullet points */
+    display: flex; /* Use flexbox for the navigation menu */
+}
+
+nav li {
+    margin-left: 2vw; /* Use viewport width units for margin, to make it dynamic and responsive */
+}
+
+nav a {
+    text-decoration: none; /* Remove the default underline for links */
+    color: #333; /* Set the link color to a dark gray */
+}
+
+.link-container {
+    display: flex; /* Use flexbox for the link container */
+    flex-wrap: wrap; /* Allow links to wrap to the next line */
+    justify-content: center; /* Center the links horizontally */
+    margin-top: 2vh; /* Use viewport height units for margin, to make it dynamic and responsive */
+}
+
+.link-box {
+    background-color: #f2f2f2; /* Set the background color for the link boxes */
+    padding: 1vw 2vw; /* Use viewport width units for padding (horizontal and vertical), to make it dynamic and responsive */
+    margin: 1vw; /* Use viewport width units for margin, to make it dynamic and responsive */
+    text-align: center; /* Center the text within the link boxes */
+}
+
+.link-box a {
+    text-decoration: none; /* Remove the default underline for links */
+    color: #333; /* Set the link color to a dark gray */
+}
+
+
+
+
+
+
+
+/* FRONT PAGE STORY */ 
+
+
+/* Resume Styles */
+.resume {
+    max-width: 800px; /* Set a maximum width for the resume container */
+    margin: 0 auto; /* Center the resume container horizontally */
+    padding: 2vw; /* Use viewport width units for padding, to make it dynamic and responsive */
+}
+
+.section {
+    margin-bottom: 3rem; /* Add some bottom margin for spacing between sections */
+}
+
+.section h2 {
+    font-size: 2rem; /* Set a larger font size for section headings */
+    color: #555; /* Set a muted color for section headings */
+    position: relative; /* Position the section heading relative to its container */
+    margin-bottom: 1rem; /* Add some bottom margin for spacing */
+}
+
+.section h2::before {
+    content: ""; /* Create an empty pseudo-element */
+    position: absolute; /* Position the pseudo-element absolutely */
+    left: -2rem; /* Move the pseudo-element to the left */
+    top: 50%; /* Position the pseudo-element vertically centered */
+    transform: translateY(-50%); /* Adjust the vertical positioning using translation */
+    height: 1px; /* Set the height of the pseudo-element (for creating a horizontal line) */
+    width: 1.5rem; /* Set the width of the pseudo-element (for creating a horizontal line) */
+    background-color: #555; /* Set the background color of the pseudo-element (for creating a horizontal line) */
+}
+
+.section h2::after {
+    content: ""; /* Create an empty pseudo-element */
+    position: absolute; /* Position the pseudo-element absolutely */
+    right: -2rem; /* Move the pseudo-element to the right */
+    top: 50%; /* Position the pseudo-element vertically centered */
+    transform: translateY(-50%); /* Adjust the vertical positioning using translation */
+    height: 1px; /* Set the height of the pseudo-element (for creating a horizontal line) */
+    width: 1.5rem; /* Set the width of the pseudo-element (for creating a horizontal line) */
+    background-color: #555; /* Set the background color of the pseudo-element (for creating a horizontal line) */
+}
+
+.entry {
+    margin-bottom: 1.5rem; /* Add some bottom margin for spacing between entries */
+    padding: 1rem; /* Add some padding for spacing within entries */
+    background-color: #fff; /* Set a white background color for entries */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow effect */
+    transition: box-shadow 0.3s ease; /* Add a transition effect for smooth box shadow animation */
+}
+
+.entry:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase the box shadow on hover */
+}
+
+.entry h3 {
+    font-size: 1.2rem; /* Set a slightly larger font size for entry titles */
+    color: #333; /* Set the color for entry titles */
+    margin-bottom: 0.5rem; /* Add some bottom margin for spacing */
+}
+
+.entry p {
+    color: #666; /* Set a muted color for entry descriptions */
+    line-height: 1.5; /* Set a line height for better readability */
+}
+
+.entry .details {
+    display: none; /* Initially hide the details section */
+    margin-top: 1rem; /* Add some top margin for spacing */
+    padding-top: 1rem; /* Add some top padding for spacing */
+    border-top: 1px solid #ddd; /* Add a top border for separating the details section */
+}
+
+.entry:hover .details {
+    display: block; /* Show the details section on hover */
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.entry-header h3 {
+    margin: 0;
+}
+
+.entry-logo {
+    margin-left: 20px;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+}
+
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.entry-info {
+    flex-grow: 1;
+}
+
+.entry-info h3 {
+    margin: 0;
+}
+
+.location {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+}
+
+.year {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.entry {
+    margin-bottom: 30px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.entry-info {
+    flex-grow: 1;
+}
+
+.entry-info h3 {
+    margin: 0;
+}
+
+.location {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.logo {
+    margin-left: 20px;
+    flex-basis: 20%;
+    max-width: 100px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.details {
+    margin-left: 20px;
+}
+
+.role {
+    margin-bottom: 20px;
+}
+
+.role h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.date {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.role-details {
+    margin-top: 10px;
+}
+
+.role-details p {
+    margin: 5px 0;
+}
+
+.section {
+    padding: 20px;
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.entry {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.entry h3 {
+    margin-top: 0;
+}
+
+.details {
+    margin-top: 10px;
+}
+
+.details p {
+    margin: 5px 0;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.entry-logo {
+    margin-left: 20px;
+}
